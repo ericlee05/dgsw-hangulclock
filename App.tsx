@@ -56,7 +56,7 @@ export default function App() {
           <td style={timePixelHour([10, 11, 12], time)}>열</td>
           <td style={timePixelHour(11, time)}>한</td>
           <td style={timePixelHour(12, time)}>두</td>
-          <td style={{color:'black', paddingLeft:7, paddingRight:7}}>시</td>
+          <td style={timePixelHourSpecial(time)}>시</td>
         </tr>
 
         <tr>
@@ -154,6 +154,13 @@ function timePixelMinSpecial (time: Date) : React.CSSProperties {
       color: (time.getMinutes() != 0) ? 'black' : 'darkgray',
       paddingLeft:7, paddingRight:7
     }
+}
+
+function timePixelHourSpecial (time: Date) : React.CSSProperties {
+  return {
+    color: (time.getHours() % 12 != 0) ? 'black' : 'darkgray',
+    paddingLeft:7, paddingRight:7
+  }
 }
 
 function timePixelMinTen (min: number, time: Date) : React.CSSProperties {
