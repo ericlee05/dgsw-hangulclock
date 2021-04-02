@@ -27,6 +27,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "Hangul Clock for Daegu Software Meister High School",
+    "githubUrl": "https://github.com/VINTO1819/dgsw-hangulclock"
   }
 }
